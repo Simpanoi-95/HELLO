@@ -10,10 +10,7 @@ import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.etPassword
 import kotlinx.android.synthetic.main.activity_registration.*
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.RequestBody
-import okhttp3.Response
+import okhttp3.*
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
