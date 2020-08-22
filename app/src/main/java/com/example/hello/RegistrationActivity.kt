@@ -1,5 +1,7 @@
 package ke.co.hello
 
+import ApiInterface
+import RegistrationResponse
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -17,12 +19,12 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
 
         btnRegister.setOnClickListener {
-            var firstName = etFirstName.text.toString()
-            var lastName = etLastName.text.toString()
+            val firstName = etFirstName.text.toString()
+            val lastName = etLastName.text.toString()
             val email = etEmail.text.toString()
             val phoneNumber = etPhoneNumber.text.toString()
             val password = etPassword.text.toString()
-            val passwordConfirmation = etConfirmPassword.text.toString()
+            val ConfirmPassword = etConfirmPassword.text.toString()
 
             var requestBody = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)

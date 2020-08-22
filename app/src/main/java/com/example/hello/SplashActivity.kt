@@ -11,7 +11,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(baseContext)
-        var accessToken = sharedPreferences.getString("ACCESS_TOKEN_KEY", "")
+        val accessToken = sharedPreferences.getString("ACCESS_TOKEN_KEY", "")
 
         if (accessToken.isNullOrEmpty()) {
             val intent = Intent(baseContext, MainActivity::class.java)
