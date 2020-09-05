@@ -14,6 +14,7 @@ class CoursesActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_courses)
+                database=Room.databaseBuilder(baseContext,helloDatabase::class java,name:"hello-db").build()
 
         fetchCourses()
         }
@@ -35,6 +36,9 @@ class CoursesActivity : AppCompatActivity() {
             ) {
                     if (response.isSuccessful) {
                     var courseList = response.body()?.courses as List<Course>
+                            thread{
+                                    course
+                            }
                     var coursesAdapter = CoursesAdapter(courseList)
                             rvCourses.layoutManager = LinearLayoutManager(baseContext)
                             rvCourses.adapter = coursesAdapter

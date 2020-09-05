@@ -22,10 +22,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(baseContext, RegistrationActivity::class.java)
             startActivity(intent)
         }
-
-        btnLogin.setOnClickListener {
-            var email = etUserName.text.toString()
-            var password = etPassword.text.toString()
+            btnLOGIN.setOnClickListener {
+            val email = etName.text.toString()
+            val password = etPassword.text.toString()
 
             val requestBody = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
